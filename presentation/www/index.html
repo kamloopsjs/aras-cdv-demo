@@ -19,51 +19,177 @@
 -->
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/brick-1.0.1.css" />
-        <!-- link rel="stylesheet" type="text/css" href="css/index.css" / -->
-        <title>Hello Kamloops JavaScript!</title>
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+      <title>Hello Kamloops JavaScript!</title>
+      <meta name="description" content="A presentation on Cordova, which itself is a Cordova app built with reveal.js">
+      <meta name="author" content="Aras Balali Moghaddam">
+
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+      <link rel="stylesheet" href="css/reveal.min.css">
+      <link rel="stylesheet" href="css/serif_theme.css" id="theme">
+
+      <!-- For syntax highlighting -->
+      <link rel="stylesheet" href="css/zenburn.css">
     </head>
     <body>
-      <x-appbar>
-        <h1>Cordova @ Kamloops JS</h1>
-      </x-appbar>
-      <x-deck transition-type="slide-left">
-        <x-card transition="show" transition-direction="forward" show>First Slide</x-card>
-        <x-card>
+
+      <div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section>
+          <h1>Cordova</h1>
+          <h3>A Brief Introduction</h3>
+          <p>
+            <small>Presented by <a href="http://arasbm.com">Aras Balali Moghaddam</a> / <a href="http://twitter.com/arasbm">@arasbm</a></small>
+          </p>
+        </section>
+
+        <section>
           <div class="app">
-            <h1>Apache Cordova</h1>
+            <h3>Apache Cordova</h3>
+            <p>Note: this presentation is a cordova app</p>
             <div id="deviceready" class="blink">
               <p class="event listening">Connecting to Device</p>
-              <p class="event received">Device is Ready</p>
+              <p class="event received">Device is Ready!</p>
             </div>
           </div>
-        </x-card>
-        <x-card>
-          <h2>Introduction</h2>
-        </x-card>
-        <x-card>
-          <span>test</span><h2>What is Cordova?</h2>
-        </x-card>
-        <x-card>
-          <h2>When to use Cordova?</h2>
-        </x-card>
-        <x-card>
-          <div>Test 4</div>
-        </x-card>
-        <x-card>11</x-card>
-        <x-card>22</x-card>
-        <x-card>33</x-card>
-        <x-card>44</x-card>
-      </x-deck>
+        </section>
+
+        <section>
+          <h2>My name is Aras</h2>
+          <p>I am a freelance mobile web developer:</p>
+          <ul>
+            <li>Open Web Apps</li>
+            <li>JavaScript</li>
+            <li>Cordova</li>
+            <li>UX and UI</li>
+            <li>Open Source</li>
+            <li>Firefox OS</li>
+            <li>...</li>
+          </ul>
+          <p>Note: I am only a user of Cordova</p>
+        </section>
+
+				<section>
+					<h2>What is Cordova?</h2>
+          <h3>A platform for creating mobile apps using HTML+CSS+JS (primarily)</h3>
+					<ul>
+            <li>Packaged web apps + JavaScript API</li>
+            <li>Provides a bridge to access common native functionalities</li>
+					  <li>Uses the default webview for each platform</li>
+					  <li>The www folder is (usually) included and served in the app</li>
+					</ul>
+				</section>
+
+        <section>
+					<h2>When should I develop a Cordova app?</h2>
+					<ol>
+            <li>Can you get away with a responsive hosted mobile web app? → YAY!</li>
+            <li>Use Cordova/Phonegap (or another hybrid method)</li>
+            <li><strike>Native?</strike> go back to option 2</li>
+          </ol>
+				</section>
+
+				<section>
+					<h2>Why is Cordova awesome?</h2>
+          <ul>
+            <li>Cordova has a large and active community</li>
+            <li>Plugin architecture means you only get what you use</li>
+            <li>Stable but quick to adapt to changing mobile landscape</li>
+            <li>If needed, it is easy to extend with custom plugins</li>
+            <li>Speed up development of both app logic and UI</li>
+            <li>Web itself has the largest developer community in the world</li>
+          </ul>
+				</section>
+
+        <section>
+          <h2>Cordova vs. Phonegap</h2>
+          <ul>
+            <li>Phonegap is downstream from Cordova</li>
+            <li>Platform updates and latest plugins are developed for Cordova first</li>
+            <li>Phonegaps primary addition is the cloud build</li>
+            <li>Many plugins don't make it to phonegap build and custom plugins are not supported</li>
+            <li>When using Cordova locally, you have to maintain a build machine and install platform SDK and tools for each native platform</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Where to start?</h2>
+          <h3><a href="http://cordova.apache.org/docs/en/1.5.0/">Cordova Docs</a></h3>
+          <p>Honestly, the docs are well written and very helpful. (make sure you are on the latest version of the docs)</p>
+        </section>
+        <section>
+          <h2>Command Line Interface FTW</h2>
+          <h3>Best way to learn and use cordova. If you dont have it, install it right now!</h3>
+          <pre><code data-trim contenteditable>
+$ sudo npm install -g cordova
+          </code></pre>
+        </section>
+        <section>
+					<h2>Create a HelloWorld app</h2>
+          <pre><code data-trim contenteditable>
+$ cordova create my_first_app
+$ cd my_first_app
+          </code></pre>
+				</section>
+        <section>
+          <h2>Clone these sides</h2>
+          <h3>Clone this slide deck:</h3>
+          <pre><code data-trim contenteditable>
+$ git clone git@github.com:KamloopsJavaScript/aras-cdv-demo.git
+$ cd aras-cdv-demo/presentation
+          </code></pre>
+          <p>Try running some of these commands:</p>
+          <pre><code data-trim contenteditable>
+$ cordova help
+$ cordova platform ls
+$ cordova platform add ios
+$ cordova serve
+$ cordova run
+          </code></pre>
+        </section>
+        <section>
+          <h2>Discussion/Questions</h2>
+        </section>
+      </div>
       <script type="text/javascript" src="cordova.js"></script>
-      <script type="text/javascript" src="js/brick-1.0.1.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
+      <script src="js/head.min.js"></script>
+  		<script src="js/reveal.min.js"></script>
       <script type="text/javascript">
           app.initialize();
+
+          // Full list of configuration options available here:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            parallaxBackgroundImage: 'img/kamloops_panorama_blur2.jpg',
+            parallaxBackgroundSize: '5000px 1000px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+              { src: 'js/classList.js', condition: function() { return !document.body.classList; } },
+              //{ src: 'revealjs_plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              //{ src: 'revealjs_plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'revealjs_plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'revealjs_plugins/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: 'revealjs_plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+          });
       </script>
     </body>
 </html>
